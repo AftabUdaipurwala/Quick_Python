@@ -31,3 +31,11 @@ def stringlencal(strings):
 
 
 stringlencal('Aftab Udaipurwala')
+
+
+# function with multiple parameters
+def converter(original_unit, coeff):
+    return original_unit * coeff
+
+
+print(10, 0.3048)
