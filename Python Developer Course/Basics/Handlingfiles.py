@@ -28,3 +28,22 @@ myfile = open(
 fruits = myfile.read()
 print(fruits)
 myfile.close()
+
+# Writing to a text file
+myfile = open('employees.txt', mode='w')  # this overwrites everytime we open this file
+myfile.write('Mike\njoe\nAftab')
+myfile.close()  # save a close
+
+# Appending the text to the file
+# Writing to a text file
+myfile = open('employees.txt', mode='a')  # this overwrites everytime we open this file
+myfile.write('\nMALE\nHIM\nMan')
+myfile.close()  # save a close
+
+# Reading and writing (appending to the text file)
+myfile = open('employees.txt', mode='a+')  # this overwrites everytime we open this file
+myfile.seek(
+    0)  # since cursor is at the end of the file as its in append mode we need to seek to get it to start of the file
+myfile.read()
+myfile.write('\nJoseph')
+myfile.close()  # save a close
