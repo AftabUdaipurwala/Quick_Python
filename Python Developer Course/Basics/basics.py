@@ -1,11 +1,26 @@
-# list
-store_address = ['Flat Street', '118', 'New York']
-# dictionary
-pins = {'Mike': 1111, 'Joe': 1234, 'Jack': 2222}
-# output function
-print(store_address[0], store_address[1])
-# input function
-pin = int(input('Enter a pin of Employee'))
-print(pin)
+address = ["Flat Floor Street", "18", "New York"]
+pins = {"Mike": 1234, "Joe": 1111, "Jack": 2222}
 
-# Creating functions
+print(address[0], address[1])
+
+pin = int(input("Enter your pin: "))
+
+
+def find_in_file(f):
+    myfile = open("sample.txt")
+    fruits = myfile.read()
+    fruits = fruits.splitlines()
+    if f in fruits:
+        return "That fruit is in the list."
+    else:
+        return "No such fruit found!"
+
+
+if pin in pins.values():
+    fruit = input("Enter fruit: ")
+    print(find_in_file(fruit))
+else:
+    print("Incorrect pin!")
+    print("This info can be accessed only by: ")
+    for key in pins.keys():
+        print(key)
